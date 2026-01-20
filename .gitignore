@@ -1,0 +1,27 @@
+# Data
+dataset/
+Images/
+labels/
+*.zip
+*.tar
+*.tar.gz
+
+# YOLO / training artifacts
+runs/
+wandb/
+mlruns/
+*.pt
+*.onnx
+*.engine
+
+# Notebook junk
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
