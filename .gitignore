@@ -10,6 +10,7 @@ labels/
 runs/
 wandb/
 mlruns/
+.ultralytics/
 *.pt
 *.onnx
 *.engine
