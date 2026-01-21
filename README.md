@@ -17,12 +17,27 @@ on sample images provided in the repository.
 Trained model weights are not included in this repository.
 Users can reproduce results by running the training notebook or supplying their own trained weights.
 
+## Design Decisions
+- Chose YOLOv8n to balance inference speed and accuracy
+- Used normalized YOLO label format for consistency and scalability
+- Accepted lower performance on rare classes due to dataset imbalance
+- Prioritized interpretability and evaluation over raw accuracy
+
+## Metrics
+Performance varies across classes due to class imbalance in the dataset.
+High-frequency classes such as cars and pickup trucks show stronger recall,
+while rare classes (e.g., motorcycles) exhibit lower performance.
+This reflects real-world dataset constraints rather than model failure.
+
+
+
 ### Using a Python script
 ```bash
 python src/infer_yolov8.py \
   --weights path/to/best.pt \
   --source samples/images \
   --conf 0.15
+
 
 
 
